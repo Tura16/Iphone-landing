@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Inter";
-    src: url(/fonts/Inter18pt-Regular.woff2) format(woof2);
+    src: url(/fonts/Inter18pt-Regular.woff2) format(woff2);
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: "Inter";
-    src: url(/fonts/Inter18pt-Bold.woff2) format(woof2);
+    src: url(/fonts/Inter18pt-Bold.woff2) format(woff2);
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -219,8 +219,8 @@ a {
 
 .price__color-card img:hover {
     opacity: 0.9;
-    transform: scale(1.1); /* Увеличивает изображение на 10% */
-    transition: transform 0.3s ease; /* Анимация увеличения */
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
 }
 
 .price__color-card a:hover {
@@ -499,7 +499,6 @@ a {
         text-align: center;
 }
 }
-
 
 @media (max-width: 830px) {
     .info__img {
