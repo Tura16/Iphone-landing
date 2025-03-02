@@ -2,15 +2,15 @@
 
 @font-face {
     font-family: "Inter";
-    src: url(/fonts/Inter18pt-Regular.woff2) format(woff2);
-    font-weight: 400;
+    src: url(/fonts/Inter18pt-Medium.woff2) format("woff2");
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url(/fonts/Inter18pt-Bold.woff2) format(woff2);
+    src: url(/fonts/Inter18pt-Bold.woff2) format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -54,17 +54,29 @@ a {
     align-items: center;
 }
 
-.nav a:hover {
-    transition: transform 0.3s ease;
-    opacity: 0.6;
-    color: #fff
+.nav a {
+    transition: 0.2s ease;
 }
-    
+
+.nav__menu-item:hover {
+    transform: scale(0.95);
+    opacity: 0.6;
+    color: #fff;
+}
+
+.nav__menu-item:active {
+    transform: scale(0.90);
+}
+
 .nav__menu {
     display: flex;
     gap: 30px;
     flex-grow: 1;
-    flex-basis: 0;
+    flex-basis: 0; 
+}
+
+.nav button:focus-visible {
+    outline: 5px dashed #fff;
 }
 
 .nav__menu-item,
@@ -78,12 +90,29 @@ a {
     color: #717171;
 }
 
+.nav__menu-link:focus-visible {
+    outline: 5px dashed #fff;
+}
+
 .nav__number {
     flex-grow: 1;
     flex-basis: 0;
     text-align: right;
 }
 
+.nav__number-list:focus-visible {
+    outline: 5px dashed #fff;
+}
+
+.nav__number:hover {
+    transform: scale(0.99);
+    opacity: 0.6;
+    color: #fff;
+}
+
+.nav__number:active {
+    transform: scale(0.98);
+}
 
 .logo {
     width: 39px;
@@ -94,19 +123,14 @@ a {
     display: none;
 }
 
+
+
 /** 1 Секция welcome */
 
 .welcome {
     background-color: #f5f5f7;
     text-align: center;
     padding: 70px 0 40px 0;
-}
-
-.welcome a:hover {
-    transition: transform 0.3s ease;
-    opacity: 0.9;
-    transform: scale(1.1);
-
 }
 
 .welcome__title {
@@ -132,8 +156,22 @@ a {
     padding: 22px 117px 19px 118px;
     line-height: 29px;
     text-transform: uppercase;
+    transition: transform 0.3s ease;
 
     color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(0.8)
+}
+
+.btn:focus-visible {
+    outline: 5px dashed #0a0a0a;
 }
 
 /** 2 Секция info */
@@ -161,11 +199,6 @@ a {
     line-height: 130%;
 }
 
-.info__desc img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
 .info__desc-text p {
     font-weight: 400;
     font-size: 14px;
@@ -190,8 +223,12 @@ a {
     height: 310px;
     margin-left: 190px;
     border-radius: 5%;
+    transition: transform 0.3s ease;
 }
 
+.info__img:hover {
+    transform: scale(1.03);
+}
 
 
 /** 3 Секция price__color */
@@ -215,18 +252,40 @@ a {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    cursor: pointer;
+}
+
+.price__color-card img {
+    transition: transform 0.3s ease; 
 }
 
 .price__color-card img:hover {
     opacity: 0.9;
     transform: scale(1.1); 
-    transition: transform 0.3s ease; 
+}
+
+.price__color-card img:active {
+    transform: scale(0.90);
+    opacity: 0.7; 
+}
+
+.price__color-card a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.price__color-card a:focus-visible {
+    outline: 5px dashed #0a0a0a;
 }
 
 .price__color-card a:hover {
-    transition: transform 0.3s ease;
     opacity: 0.6;
     color: #490e84;
+}
+
+.price__color-card a:active {
+    transform: scale(0.9);
+    opacity: 1;
 }
 
 .card__title {
@@ -295,6 +354,10 @@ a {
     opacity: 0.5;
 }
 
+.contacts__input:focus-visible {
+    outline: 5px dashed #fff;
+}
+
 .contacts__form p {
     font-weight: 400;
     font-size: 14px;
@@ -315,16 +378,24 @@ a {
     line-height: 130%;
     text-transform: uppercase; 
     cursor: pointer;
+    transition: transform 0.3s ease;
 
     background-color: #fff;
     color:  #490e84;
     border: none;
 }
 
-.contacts__inner button:hover {
-    transition: transform 0.3s ease;
+.contacts__btn:hover {
     opacity: 0.6;
     transform: scale(1.1);
+}
+
+.contacts__btn:active {
+    transform: scale(0.9);
+}
+
+.contacts__btn:focus-visible {
+    outline: 5px dashed #fff;
 }
 
 /** Footer */
@@ -334,10 +405,22 @@ a {
     background-color: #0a0a0a;
 }
 
-.footer a:hover {
+.footer a {
+    display: block;
     transition: transform 0.3s ease;
+}
+
+.footer a:hover {
+    transform: scale(0.95);
     opacity: 0.6;
-    color: #fff
+}
+
+.footer a:active {
+    transform: scale(0.9);
+}
+
+.footer a:focus-visible {
+   outline: 5px dashed #fff;
 }
 
 .footer .container {
@@ -349,7 +432,6 @@ a {
     color: #717171;
 
     padding: 32px 0 32px 0;
-    
 }
 
 .confidencial {
@@ -369,6 +451,84 @@ a {
 }
 
 /** Адаптив */
+
+@media (hover: none) {
+    .nav__menu-item:hover {
+        transform: none;
+        opacity: 1;
+    } 
+
+    .nav__number:hover {
+        transform: none;
+        opacity: 1;
+    }
+
+    .nav__menu-item:active {
+        transform: scale(0.90);
+        opacity: 0.5;
+    } 
+
+    .nav__number:active {
+        transform: scale(0.99);
+        opacity: 0.5;
+    }
+
+    .btn:hover {
+        transform: none;
+        opacity: 1;
+    }
+
+    .btn:active {
+        transform: scale(0.90);
+        opacity: 0.7;
+    }
+
+    .info__img:hover {
+        transform: none;
+    }
+
+    .price__color-card img:hover {
+        opacity: 1;
+        transform: none; 
+    }
+
+    .price__color-card img:active {
+        transform: scale(0.90);
+        opacity: 0.7; 
+    }
+
+    .price__color-card a:hover {
+        opacity: 1;
+        color: inherit;
+        transform: none;
+    }
+
+    .price__color-card a:active {
+        transform: scale(0.9);
+        opacity: 0.6;
+        color: #490e84;
+    }
+
+    .contacts__btn:hover {
+        transform: none;
+        opacity: 1;
+    }
+
+    .contacts__btn:active {
+        transform: scale(0.9);
+        opacity: 0.6;
+    }
+
+    .footer a:hover {
+        transform: none;
+        opacity: 1;
+    }
+
+    .footer a:active {
+        transform: scale(0.9);
+        opacity: 0.6;
+    }
+} 
 
 
 @media (max-width: 1250px) {
@@ -391,7 +551,7 @@ a {
         height: 250px;
         margin-left: 150px;
     }
-        .contacts__title {
+    .contacts__title {
         font-size: 16px;
     }
     .price__color-card {
