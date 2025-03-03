@@ -354,8 +354,12 @@ a {
     opacity: 0.5;
 }
 
-.contacts__input:focus-visible {
-    outline: 5px dashed #fff;
+.contacts__form input:focus-visible {
+    outline: 1px solid #fff;
+}
+
+.contacts__input:focus {
+    outline: none;
 }
 
 .contacts__form p {
@@ -592,11 +596,11 @@ a {
 
 @media (max-width: 930px) {
     .menu-btn {
-        display: inline-block;
+        display: block;
         width: 50px;
         height: 50px;
         background-color: transparent;
-        order: 1;
+        order: 1 !important;
         border: none;
         cursor: pointer;
         position: relative;
